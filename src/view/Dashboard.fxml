@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- 
+    This is the Dashboard view shown after successful login.
+    It contains buttons to navigate to different modules.
+-->
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController"
+      spacing="15" alignment="CENTER" padding="20">
+    
+    <!-- Welcome Message -->
+    <Label text="Welcome to SmartRail!" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Buttons for Features -->
+    <Button text="Book Ticket" prefWidth="200" onAction="#goToBooking"/>
+    <Button text="Cancel Ticket" prefWidth="200" onAction="#goToCancellation"/>
+    <Button text="View Trains" prefWidth="200" onAction="#viewTrains"/>
+    <Button text="Logout" prefWidth="200" onAction="#logout"/>
+
+</VBox>

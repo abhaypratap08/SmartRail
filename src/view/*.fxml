@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- 
+    This is the login screen for SmartRail.
+    It uses a VBox (vertical layout) to stack UI components.
+-->
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController"
+      spacing="10" alignment="CENTER" padding="20">
+    
+    <!-- Title -->
+    <Label text="SmartRail Login" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Username Field -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Username:" minWidth="80"/>
+        <TextField fx:id="usernameField" promptText="Enter username" />
+    </HBox>
+
+    <!-- Password Field -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Password:" minWidth="80"/>
+        <PasswordField fx:id="passwordField" promptText="Enter password" />
+    </HBox>
+
+    <!-- Login Button -->
+    <Button text="Login" onAction="#handleLogin" maxWidth="120" />
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" textFill="red" />
+
+</VBox>
+<!-- 
+    This FXML file defines the layout and components of the login screen.
+    It includes fields for username and password, a login button, and a message label.
+    The controller is specified to handle the login logic.
+    The VBox layout is used to stack the components vertically with some padding and spacing.
